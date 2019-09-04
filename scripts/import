@@ -1,0 +1,22 @@
+#!/bin/bash
+
+rm /tmp/snap || true
+aria2c -o snap $1
+SNAPSHOT=!$
+
+FILE=/root/.tezos-node/indentity.json
+BACKUP=/root/identity_backup
+if test -f "$FILE"; then
+    mv $FILE $BACKUP
+fi
+
+rm /root/.tezos-node/* || true
+rm -r /root/.tezos-node/* || true
+
+ls /root/.tezos-node
+tezos-node snapshot import /root/snap
+
+FILE=/root/identity_backup
+if test -f "$FILE"; then
+    mv $BACKUP $FILE
+fi
