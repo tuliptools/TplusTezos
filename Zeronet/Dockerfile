@@ -17,6 +17,4 @@ RUN aria2c https://github.com/ogham/exa/releases/download/v0.9.0/exa-linux-x86_6
  cp exa-linux-x86_64 /usr/local/bin/exa && rm * && \
  echo "alias ls=\"exa\"" >> ~/.bashrc
 ADD ./scripts/import /usr/local/bin/import
-ADD ./scripts/sandbox-client-init /tezos/src/bin_client/tezos-init-sandboxed-client.sh
-ADD ./scripts/sandbox-start /usr/local/bin/sstart
 RUN chmod +x /usr/local/bin/import
