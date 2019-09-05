@@ -42,5 +42,6 @@ RUN chmod +x /usr/local/bin/import
 COPY ./scripts/tezos-init-sandboxed-client.sh /tezos/src/bin_client/tezos-init-sandboxed-client.sh
 COPY ./scripts/start.sh /usr/local/bin/start-sandbox
 
+RUN mv /tezos/tezos-* /usr/local/bin/
 RUN chmod +x /tezos/src/bin_client/tezos-init-sandboxed-client.sh
 RUN chmod +x /usr/local/bin/start-sandbox
