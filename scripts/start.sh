@@ -4,11 +4,12 @@ echo "Starting tezos Sandbox script"
 echo "   "
 echo "Starting Tezos node......"
 bash -c "/tezos/src/bin_node/tezos-sandboxed-node.sh 1 --rpc-addr 0.0.0.0:8732 --connections 1 > /tmp/logs 2>&1" &
-sleep 8
 
 if test -f "/tezosdata/env"; then
    echo "Skipping client init Script"
+   sleep 3
 else
+    sleep 8
     mkdir /tezosdata
     mkdir /tezosdata/tezclient
     echo "Starting Client init script"
