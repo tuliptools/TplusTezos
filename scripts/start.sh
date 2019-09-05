@@ -1,22 +1,8 @@
 #!/usr/bin/env bash
 
-
-echo "--------------------------------------------------------------"
-echo "                                                              "
-echo "         ____________________                                 "
-echo "        /|   ...    .....''./|   Tezos Sandbox start.sh       "
-echo "       / .''' . ''''_ .  ' / |                                "
-echo "      /.' ' ____ ' /_/ .  /  /.'.''.                          "
-echo "     /'. . \    /. / '   /  / '''''                           "
-echo "    /.' . ' \__/' / . .'/  /                                  "
-echo "   /.'    ' .  .   '.. /  /                                   "
-echo "   |~~~~~~~~~~~~~~~~~~~| /                                    "
-echo "   |___________________|/                                     "
+echo "Starting tezos Sandbox script"
 echo "   "
-echo "   "
-echo "   "
-echo "   "
-echo "Sandbox start script: Starting Tezos node"
+echo "Starting Tezos node......"
 bash -c "/tezos/src/bin_node/tezos-sandboxed-node.sh 1 --rpc-addr 0.0.0.0:8732 --connections 1 > /tmp/logs 2>&1" &
 sleep 8
 
