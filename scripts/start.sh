@@ -13,7 +13,7 @@ else
     mkdir /tezosdata
     mkdir /tezosdata/tezclient
     echo "Starting Client init script"
-    tezos/src/bin_client/tezos-init-sandboxed-client.sh 1 > /tezosdata/env
+    /tezos/src/bin_client/tezos-init-sandboxed-client.sh 1 > /tezosdata/env
     cat /tezosdata/env >> ~/.bashrc
 fi
 
