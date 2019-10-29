@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-ADD Alphanet/build.sh build.sh
+ADD Babylonnet/build.sh build.sh
 RUN chmod +x build.sh
 RUN ./build.sh
 

@@ -32,7 +32,7 @@ $PREFIX/opam init -y --compiler=4.07.1 --disable-sandboxing
 eval $(opam env)
 
 #clone the tezos gitlab repo
-git clone -b alphanet https://gitlab.com/tezos/tezos.git & wait
+git clone -b babylonnet https://gitlab.com/tezos/tezos.git & wait
 { sleep 5; } & wait
 
 cd tezos
